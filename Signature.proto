@@ -13,6 +13,7 @@ message Signature {
         double unk22 = 22; // sample 0x40800000 (iOS only, possibly vertical accuracy)
         uint64 unk26 = 26; // Always 3
         uint64 unk28 = 28; // Always 1
+    }
 
     message UnknownBinary5 { // Only captured once
         bytes unk2 = 2;
@@ -40,7 +41,7 @@ message Signature {
         double accelerometer_x = 16;
         double accelerometer_y = 17;
         double accelerometer_z = 18; // Always 0x40239999a0000000 in the dumps its 9.8 double
-        uint64 accelerometer_axis = 19; // Always 3
+        uint64 accelerometer_axes = 19; // Always 3
     }
 
     message DeviceInfo {
@@ -59,7 +60,7 @@ message Signature {
         string firmware_fingerprint = 14; // Android only
     }
 
-    // iOS only
+    // Only appears rarely
     message Unknown9 {
         // all of these had 1 as their value
         uint64 unk3 = 3;
@@ -72,11 +73,11 @@ message Signature {
     UnknownBinary5 unk5 = 5;
     SensorInfo sensor_info = 7;
     DeviceInfo device_info = 8;
-    Unknown9 unk9 = 9; // iOS only
+    Unknown9 unk9 = 9;
     uint64 unk10 = 10; //actually looks like a negative double
     uint64 unk20 = 20;
     bytes unk22 = 22; // same in all dumps
     uint64 timestamp = 23; // epoch timestamp in ms
-    bytes unk24 = 24; // globeriz: possible 0x30 bytes length? lennix: seems to be variable length
+    repeated uint32 request_hash = 24; // hashes of each request message
 
 }
