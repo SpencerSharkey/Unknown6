@@ -121,7 +121,7 @@ void __fastcall sub_564C8(int a1, int a2)
   char v127; // [sp+75h] [bp-2Bh]@10
   char v128; // [sp+76h] [bp-2Ah]@10
   char v129; // [sp+77h] [bp-29h]@10
- 
+
   _R5 = a1;
   v3 = *(_DWORD *)(a1 + 4);
   v4 = a2;

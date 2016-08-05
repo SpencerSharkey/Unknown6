@@ -464,7 +464,7 @@ int __fastcall sub_985E0(int result)
   int v462; // r11@1
   int v463; // lr@1
   int v464; // r4@1
- 
+
   v1 = *(_DWORD *)(result + 24);
   v2 = *(_DWORD *)(result + 220) ^ *(_DWORD *)(result + 672) ^ (v1 | *(_DWORD *)(result + 432)) ^ (*(_DWORD *)(result + 564) ^ *(_DWORD *)(result + 292) & ~v1 | *(_DWORD *)(result + 392));
   v3 = ~*(_DWORD *)(result + 392);

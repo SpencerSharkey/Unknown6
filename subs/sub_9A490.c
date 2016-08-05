@@ -482,7 +482,7 @@ int __fastcall sub_9A490(int result)
   int v480; // r3@1
   int v481; // r1@1
   int v482; // r5@1
- 
+
   v1 = *(_DWORD *)(result + 656) ^ *(_DWORD *)(result + 800) ^ *(_DWORD *)(result + 236) ^ *(_DWORD *)(result + 584) ^ *(_DWORD *)(result + 80);
   v2 = *(_DWORD *)(result + 112);
   v3 = v1 | *(_DWORD *)(result + 112);

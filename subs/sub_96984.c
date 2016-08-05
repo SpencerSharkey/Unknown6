@@ -469,7 +469,7 @@ int __fastcall sub_96984(int result)
   int v467; // r1@1
   int v468; // r3@1
   int v469; // r12@1
- 
+
   v1 = *(_DWORD *)(result + 72);
   v2 = *(_DWORD *)(result + 40) & ~v1;
   v3 = *(_DWORD *)(result + 692) ^ *(_DWORD *)(result + 344) ^ *(_DWORD *)(result + 40) ^ *(_DWORD *)(result + 180) ^ (*(_DWORD *)(result + 324) ^ (*(_DWORD *)(result + 316) ^ v1 | *(_DWORD *)(result + 224))) & ~*(_DWORD *)(result + 500) ^ (*(_DWORD *)(result + 8) & ~(*(_DWORD *)(result + 388) ^ *(_DWORD *)(result + 40) & ~*(_DWORD *)(result + 780)) ^ *(_DWORD *)(result + 72)) & ~*(_DWORD *)(result + 224);

@@ -471,7 +471,7 @@ int __fastcall sub_94BDC(int result)
   int v469; // r1@1
   int v470; // r6@1
   int v471; // r2@1
- 
+
   v1 = ~*(_DWORD *)(result + 28);
   v2 = v1 & *(_DWORD *)(result + 168);
   v3 = *(_DWORD *)(result + 168);

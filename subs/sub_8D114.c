@@ -545,7 +545,7 @@ int __fastcall sub_8D114(int result)
   int v543; // r3@1
   int v544; // r7@1
   int v545; // r6@1
- 
+
   v1 = *(_DWORD *)(result + 132);
   v2 = *(_DWORD *)(result + 12);
   v3 = (*(_DWORD *)(result + 520) | *(_DWORD *)(result + 128)) ^ *(_DWORD *)(result + 432) ^ *(_DWORD *)(result + 488) ^ *(_DWORD *)(result + 164);

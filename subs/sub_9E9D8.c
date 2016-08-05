@@ -7,7 +7,7 @@ void __fastcall sub_9E9D8(int a1, int a2)
   void *v6; // r3@1
   void *v7; // r5@1
   void *v8; // t1@2
- 
+
   v2 = a1;
   v3 = a2;
   v4 = malloc(0x32Cu);

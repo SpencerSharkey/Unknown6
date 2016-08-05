@@ -400,7 +400,7 @@ int __fastcall sub_910A8(int result)
   int v398; // r1@1
   int v399; // r6@1
   int v400; // r1@1
- 
+
   v1 = *(_DWORD *)(result + 264);
   v2 = *(_DWORD *)(result + 20) ^ *(_DWORD *)(result + 360);
   v3 = *(_DWORD *)(result + 28) ^ *(_DWORD *)(result + 792) ^ *(_DWORD *)(result + 568) & *(_DWORD *)(result + 640) ^ (*(_DWORD *)(result + 436) & *(_DWORD *)(result + 640) ^ *(_DWORD *)(result + 420) | *(_DWORD *)(result + 424));

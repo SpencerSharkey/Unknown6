@@ -487,7 +487,7 @@ int __fastcall sub_8B2F4(int result)
   int v485; // r3@1
   int v486; // r4@1
   int v487; // r2@1
- 
+
   v1 = *(_DWORD *)(result + 140);
   v2 = v1 & ~*(_DWORD *)(result + 108);
   v3 = *(_DWORD *)(result + 108) ^ v1;

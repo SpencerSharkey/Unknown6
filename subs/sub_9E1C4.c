@@ -156,7 +156,7 @@ int __fastcall sub_9E1C4(int result, int a2, int a3)
   int v156; // r8@1
   int v157; // r3@1
   int v158; // r7@1
- 
+
   v3 = *(_DWORD *)(result + 72);
   v4 = *(_DWORD *)(result + 476);
   v5 = *(_DWORD *)(result + 376);

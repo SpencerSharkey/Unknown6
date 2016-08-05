@@ -544,7 +544,7 @@ int __fastcall sub_8F0B0(int result)
   int v542; // lr@1
   int v543; // r6@1
   int v544; // r12@1
- 
+
   v1 = *(_DWORD *)(result + 664);
   v2 = *(_DWORD *)(result + 792);
   v3 = v1 | *(_DWORD *)(result + 744);

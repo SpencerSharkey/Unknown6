@@ -447,7 +447,7 @@ int __fastcall sub_92E08(int result)
   int v445; // r11@1
   int v446; // r1@1
   int v447; // r6@1
- 
+
   v1 = *(_DWORD *)(result + 592) & *(_DWORD *)(result + 152);
   v2 = v1 ^ *(_DWORD *)(result + 120);
   v3 = *(_DWORD *)(result + 592) & *(_DWORD *)(result + 152);
