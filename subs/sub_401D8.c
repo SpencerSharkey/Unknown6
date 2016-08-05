@@ -19,7 +19,7 @@ int __fastcall sub_401D8(int a1, int a2)
   v5 = *(_DWORD *)(*v3 - 12);
   if ( v5 )
   {
-    sub_110830(*v3, v5, 1, dword_1F85A8);
+    WireFormat::VerifyUTF8StringFallback(*v3, v5, 1, dword_1F85A8);
     v6 = *(const void ***)(v2 + 12);
     *(_BYTE *)v4 = 10;
     v4 = sub_1152FC(v6, (_BYTE *)(v4 + 1));

@@ -39,7 +39,7 @@ void __fastcall sub_1B7E44(const void **a1, size_t a2, int a3, int a4)
   v12 = v10 - a3;
   if ( v11 > *((_DWORD *)*a1 - 2) || *((_DWORD *)v5 - 1) > 0 )
   {
-    v13 = sub_1B7D04(v11);
+    v13 = basic_string::_S_create(v11);
     v14 = v13;
     v15 = (void *)(v13 + 12);
     if ( v4 )

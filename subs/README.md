@@ -61,48 +61,6 @@ Some of the routines may be parts of the protobuf library.
 |---------------|---------|
 | sub_1152FC    | Common service routine, called from many places |
 | sub_114D9C    | Common service routine, called from many places |
-| sub_110830    | Common service routine, called from many places |
-
-sub_110830 has a lot of further dependencies:
-
-| Sub Name      | Details |
-|---------------|---------|
-| sub_11AA8C    | |
-| sub_11AA98    | |
-| sub_11AAC8    | |
-| sub_11AB78    | |
-| sub_11ABC0    | |
-| sub_11ABD0    | |
-| sub_11AC24    | |
-| sub_11AC40    | |
-| sub_11AC8C    | |
-| sub_11ACA4    | |
-| sub_11ACE4    | |
-| sub_11B044    | |
-| sub_11B094    | |
-| sub_11B678    | |
-| sub_11B8B4    | |
-| sub_11B9B4    | |
-| sub_11B9DC    | |
-| sub_11BB2C    | |
-| sub_11BBB4    | |
-| sub_11D04C    | |
-| sub_11D1C4    | |
-| sub_11D268    | |
-| sub_19B6C4    | |
-| sub_1ABEE0    | |
-| sub_1ABF04    | |
-| sub_1B6F2C    | |
-| sub_1B6FC0    | |
-| sub_1B7044    | |
-| sub_1B7AAC    | |
-| sub_1B7D04    | |
-| sub_1B8200    | |
-| sub_1B8250    | |
-| sub_1B82C8    | |
-| sub_1B83E4    | |
-| sub_1B85C0    | |
-| sub_1B8850    | |
 
 
 ### Encryption
@@ -142,6 +100,40 @@ No clue why do we have these. :)
 | sub_19B6C4    | Called in sub_1B86EC    
 |---------------|---------|
 | sub_8742C     |         |
+
+### Standard Library
+
+Some subs are pieces of a standard library.  A good rule of thumb
+may be that six-digit subs are parts of library?
+
+Here are some subs that are probably parts of some library
+but need identifying:
+
+| Sub Name      | Details |
+|---------------|---------|
+| sub_11ABD0    | small wrapper around basic_string::append |
+| sub_11BB2C    | printf wrapper |
+| sub_11BBB4    | printf wrapper |
+| sub_1B7044    | some exception |
+| sub_1B6F2C    | exception helper (unwinds stack?) |
+| sub_19B6C4    | basic_string::_S_construct |
+| sub_1B8850    | sub_19B6C4 wrapper |
+| sub_1B6FC0    | some exception |
+| sub_1B85C0    | |
+| sub_1ABEE0    | |
+| sub_1B8200    | |
+
+
+Already identified functions are kept in this
+translation table in case they pop up in newly decompiled code:
+
+| Sub Name      | Real Name |
+|---------------|-----------|
+| sub_110830    | WireFormat::VerifyUTF8StringFallback |
+| sub_19B6C4    | std::basic_string |
+| sub_1B6FC0    | std::logic_error |
+| sub_1B7D04    | basic_string::_S_create |
+| sub_1B83E4    | basic_string::append |
 
 ## Various Notes
 

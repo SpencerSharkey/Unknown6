@@ -86,7 +86,7 @@ int __fastcall sub_41618(int a1, int a2)
   }
   if ( *(_DWORD *)(**(_DWORD **)(v2 + 40) - 12) )
   {
-    sub_110830();
+    WireFormat::VerifyUTF8StringFallback();
     v7 = *(_DWORD *)(v2 + 40);
     *(_BYTE *)v3 = 26;
     v3 = sub_1152FC(v7, v3 + 1);
@@ -298,7 +298,7 @@ LABEL_94:
   }
   if ( *(_DWORD *)(**(_DWORD **)(v2 + 124) - 12) )
   {
-    sub_110830();
+    WireFormat::VerifyUTF8StringFallback();
     v43 = *(_DWORD *)(v2 + 124);
     *(_BYTE *)v3 = 122;
     v3 = sub_1152FC(v43, v3 + 1);
@@ -331,7 +331,7 @@ LABEL_94:
   }
   if ( *(_DWORD *)(**(_DWORD **)(v2 + 136) - 12) )
   {
-    sub_110830();
+    WireFormat::VerifyUTF8StringFallback();
     v45 = *(_DWORD *)(v2 + 136);
     *(_BYTE *)v3 = -118;
     *(_BYTE *)(v3 + 1) = 1;
@@ -339,7 +339,7 @@ LABEL_94:
   }
   if ( *(_DWORD *)(**(_DWORD **)(v2 + 140) - 12) )
   {
-    sub_110830();
+    WireFormat::VerifyUTF8StringFallback();
     v46 = *(_DWORD *)(v2 + 140);
     *(_BYTE *)v3 = -110;
     *(_BYTE *)(v3 + 1) = 1;

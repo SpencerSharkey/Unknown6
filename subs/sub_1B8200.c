@@ -7,7 +7,7 @@ void *__fastcall sub_1B8200(int a1, int a2, int a3)
   void *result; // r0@1
 
   v3 = a1;
-  v4 = sub_1B7D04(*(_DWORD *)a1 + a3, *(_DWORD *)(a1 + 4));
+  v4 = basic_string::_S_create(*(_DWORD *)a1 + a3, *(_DWORD *)(a1 + 4));
   v5 = *(_DWORD *)v3;
   v6 = v4;
   result = (char *)v4 + 12;
