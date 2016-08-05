@@ -50,7 +50,8 @@ def instrument_debugger_checks():
 		},
 		onLeave: function(retval) {
 					console.log("INPUT AFTER END OF FUNCTION:");
-					var buf = Memory.readByteArray(this.bufPtr, this.bufLen);
+					var buf = Memory.readByteArray(this.bufPtr, (this.bufLen + (256 - (this.bufLen % 256)) + 32));
+					send({name:'result'},buf);
 					console.log(hexdump(buf, {
 					  offset: 0,
 					  length: this.bufLen,
@@ -60,7 +61,6 @@ def instrument_debugger_checks():
 
 					console.log("RESULT (1000 BYTES):");
 					var buf = Memory.readByteArray(retval, 1000);
-					send({name:'result'},buf);
 					console.log(hexdump(buf, {
 					  offset: 0,
 					  length: 1000,
