@@ -49,7 +49,7 @@ int __fastcall sub_40640(int a1, int a2)
   v5 = *(_DWORD *)(*v3 - 12);
   if ( v5 )
   {
-    sub_110830(*v3, v5, 1, dword_1F8574);
+    WireFormat::VerifyUTF8StringFallback(*v3, v5, 1, dword_1F8574);
     v6 = *(const void ***)(v2 + 12);
     *(_BYTE *)v4 = 10;
     v4 = sub_1152FC(v6, (_BYTE *)(v4 + 1));
@@ -58,7 +58,7 @@ int __fastcall sub_40640(int a1, int a2)
   v8 = *(_DWORD *)(*v7 - 12);
   if ( v8 )
   {
-    sub_110830(*v7, v8, 1, dword_1F8578);
+    WireFormat::VerifyUTF8StringFallback(*v7, v8, 1, dword_1F8578);
     v9 = *(const void ***)(v2 + 16);
     *(_BYTE *)v4 = 18;
     v4 = sub_1152FC(v9, (_BYTE *)(v4 + 1));
@@ -67,7 +67,7 @@ int __fastcall sub_40640(int a1, int a2)
   v11 = *(_DWORD *)(*v10 - 12);
   if ( v11 )
   {
-    sub_110830(*v10, v11, 1, dword_1F857C);
+    WireFormat::VerifyUTF8StringFallback(*v10, v11, 1, dword_1F857C);
     v12 = *(const void ***)(v2 + 20);
     *(_BYTE *)v4 = 26;
     v4 = sub_1152FC(v12, (_BYTE *)(v4 + 1));
@@ -76,7 +76,7 @@ int __fastcall sub_40640(int a1, int a2)
   v14 = *(_DWORD *)(*v13 - 12);
   if ( v14 )
   {
-    sub_110830(*v13, v14, 1, dword_1F8580);
+    WireFormat::VerifyUTF8StringFallback(*v13, v14, 1, dword_1F8580);
     v15 = *(const void ***)(v2 + 24);
     *(_BYTE *)v4 = 34;
     v4 = sub_1152FC(v15, (_BYTE *)(v4 + 1));
@@ -85,7 +85,7 @@ int __fastcall sub_40640(int a1, int a2)
   v17 = *(_DWORD *)(*v16 - 12);
   if ( v17 )
   {
-    sub_110830(*v16, v17, 1, dword_1F8584);
+    WireFormat::VerifyUTF8StringFallback(*v16, v17, 1, dword_1F8584);
     v18 = *(const void ***)(v2 + 28);
     *(_BYTE *)v4 = 42;
     v4 = sub_1152FC(v18, (_BYTE *)(v4 + 1));
@@ -94,7 +94,7 @@ int __fastcall sub_40640(int a1, int a2)
   v20 = *(_DWORD *)(*v19 - 12);
   if ( v20 )
   {
-    sub_110830(*v19, v20, 1, dword_1F8588);
+    WireFormat::VerifyUTF8StringFallback(*v19, v20, 1, dword_1F8588);
     v21 = *(const void ***)(v2 + 32);
     *(_BYTE *)v4 = 50;
     v4 = sub_1152FC(v21, (_BYTE *)(v4 + 1));
@@ -103,7 +103,7 @@ int __fastcall sub_40640(int a1, int a2)
   v23 = *(_DWORD *)(*v22 - 12);
   if ( v23 )
   {
-    sub_110830(*v22, v23, 1, dword_1F858C);
+    WireFormat::VerifyUTF8StringFallback(*v22, v23, 1, dword_1F858C);
     v24 = *(const void ***)(v2 + 36);
     *(_BYTE *)v4 = 58;
     v4 = sub_1152FC(v24, (_BYTE *)(v4 + 1));
@@ -112,7 +112,7 @@ int __fastcall sub_40640(int a1, int a2)
   v26 = *(_DWORD *)(*v25 - 12);
   if ( v26 )
   {
-    sub_110830(*v25, v26, 1, dword_1F8590);
+    WireFormat::VerifyUTF8StringFallback(*v25, v26, 1, dword_1F8590);
     v27 = *(const void ***)(v2 + 40);
     *(_BYTE *)v4 = 66;
     v4 = sub_1152FC(v27, (_BYTE *)(v4 + 1));
@@ -121,7 +121,7 @@ int __fastcall sub_40640(int a1, int a2)
   v29 = *(_DWORD *)(*v28 - 12);
   if ( v29 )
   {
-    sub_110830(*v28, v29, 1, dword_1F8594);
+    WireFormat::VerifyUTF8StringFallback(*v28, v29, 1, dword_1F8594);
     v30 = *(const void ***)(v2 + 44);
     *(_BYTE *)v4 = 74;
     v4 = sub_1152FC(v30, (_BYTE *)(v4 + 1));
@@ -130,7 +130,7 @@ int __fastcall sub_40640(int a1, int a2)
   v32 = *(_DWORD *)(*v31 - 12);
   if ( v32 )
   {
-    sub_110830(*v31, v32, 1, dword_1F8598);
+    WireFormat::VerifyUTF8StringFallback(*v31, v32, 1, dword_1F8598);
     v33 = *(const void ***)(v2 + 48);
     *(_BYTE *)v4 = 82;
     v4 = sub_1152FC(v33, (_BYTE *)(v4 + 1));
@@ -139,7 +139,7 @@ int __fastcall sub_40640(int a1, int a2)
   v35 = *(_DWORD *)(*v34 - 12);
   if ( v35 )
   {
-    sub_110830(*v34, v35, 1, dword_1F859C);
+    WireFormat::VerifyUTF8StringFallback(*v34, v35, 1, dword_1F859C);
     v36 = *(const void ***)(v2 + 52);
     *(_BYTE *)v4 = 98;
     v4 = sub_1152FC(v36, (_BYTE *)(v4 + 1));
@@ -148,7 +148,7 @@ int __fastcall sub_40640(int a1, int a2)
   v38 = *(_DWORD *)(*v37 - 12);
   if ( v38 )
   {
-    sub_110830(*v37, v38, 1, dword_1F85A0);
+    WireFormat::VerifyUTF8StringFallback(*v37, v38, 1, dword_1F85A0);
     v39 = *(const void ***)(v2 + 56);
     *(_BYTE *)v4 = 106;
     v4 = sub_1152FC(v39, (_BYTE *)(v4 + 1));
@@ -157,7 +157,7 @@ int __fastcall sub_40640(int a1, int a2)
   v41 = *(_DWORD *)(*v40 - 12);
   if ( v41 )
   {
-    sub_110830(*v40, v41, 1, dword_1F85A4);
+    WireFormat::VerifyUTF8StringFallback(*v40, v41, 1, dword_1F85A4);
     v43 = *(const void ***)(v2 + 60);
     *(_BYTE *)v4 = 114;
     result = sub_1152FC(v43, (_BYTE *)(v4 + 1));

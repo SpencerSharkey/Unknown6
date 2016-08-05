@@ -23,7 +23,7 @@ void *__fastcall sub_19B6C4(unsigned int a1, int a2, int a3)
     if ( v5 )
       sub_1B6FC0((int)"basic_string::_S_construct null not valid");
     v6 = v3 - a1;
-    v7 = sub_1B7D04(v6, 0);
+    v7 = basic_string::_S_create(v6, 0);
     v8 = v7;
     v9 = (char *)v7 + 12;
     if ( v6 == 1 )
