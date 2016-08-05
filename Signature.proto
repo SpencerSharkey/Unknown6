@@ -15,11 +15,12 @@ message Signature {
         uint64 unk28 = 28; // Always 1
     }
 
-    message UnknownBinary5 { // Only captured once
+    message Unknown5 {
+        uint64 unk1 = 1;
         bytes unk2 = 2;
-        bytes unk3 = 3;
-        bytes unk4 = 4;
-        bytes unk5 = 5;
+        repeated fixed32 unk3 = 3;
+        repeated fixed32 unk4 = 4;
+        repeated fixed32 unk5 = 5;
         bytes unk6 = 6;
         bytes unk7 = 7;
         bytes unk8 = 8;
@@ -70,7 +71,7 @@ message Signature {
 
     uint64 timestamp_since_start = 2;
     repeated LocationFix location_fix = 4;
-    UnknownBinary5 unk5 = 5;
+    Unknown5 unk5 = 5;
     SensorInfo sensor_info = 7;
     DeviceInfo device_info = 8;
     Unknown9 unk9 = 9;
