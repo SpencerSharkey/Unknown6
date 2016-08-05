@@ -13,7 +13,7 @@ def get_messages_from_js(message, data):
 		if data is None:
 			return
 		global input_counter
-		file_name = 'dump'
+		file_name = '../dumps/dump'
 		if message['payload']['name'] == 'result':
 			input_counter -= 1
 			file_name += str(input_counter)
