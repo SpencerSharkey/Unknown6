@@ -13,6 +13,22 @@ void __fastcall sub_9E9D8(int a1, int a2)
   v4 = malloc(0x32Cu);
   v5 = &off_1F7060;//Function table Offset
   v6 = off_1F7060;//Function table Offset
+  /*
+  the following functions will be called in an order:
+  sub_87568
+  sub_8930C
+  sub_8B2F4
+  sub_8D114
+  sub_8F0B0
+  sub_910A8
+  sub_92E08
+  sub_94BDC
+  sub_96984
+  sub_985E0
+  sub_9A490
+  sub_9C42C
+  sub_9E1C4
+  */
   v7 = v4;
   if ( off_1F7060 )
   {
