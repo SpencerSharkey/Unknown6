@@ -1,22 +1,19 @@
 syntax = "proto3";
 
-// This is very WIP - see Wiki page!
-
 message Signature {
-    
+
     message LocationFix {
         // On iOS there are some LocationFixes with unk26=1 and everything else empty
         string provider = 1; // "network", "gps", "fused", possibly others
         uint64 timestamp_since_start = 2;
-        double latitude = 13; 
-        double longitude = 14;
-        double unknown20 = 20; //   (iOS only)?
-        double altitude = 21;   //   0x41aded91 -> 21.74
-        double unknown22 = 22; //   (iOS only)?
+        double latitude = 13;   // sample 0x424b78d6 ->  50.868
+        double longitude = 14; // sample 0x408a1cac ->   4.316
+        double unk20 = 20; // sample 0xbf800000 (iOS only, possibly horizontal accuracy)
+        double altitude = 21;   //  sample 0x41aded91 -> 21.74
+        double unk22 = 22; // sample 0x40800000 (iOS only, possibly vertical accuracy)
         uint64 unk26 = 26; // Always 3
         uint64 unk28 = 28; // Always 1
-    }
-    
+
     message UnknownBinary5 { // Only captured once
         bytes unk2 = 2;
         bytes unk3 = 3;
@@ -26,15 +23,15 @@ message Signature {
         bytes unk7 = 7;
         bytes unk8 = 8;
     }
-    
-    message SensorInfo{
+
+    message SensorInfo {
         uint64 timestamp_snapshot = 1; // in ms
         uint64 unk3 = 3;
         uint64 unk4 = 4;
         uint64 unk5 = 5;
         double unk6_angle = 6;
         double unk7_angle = 7;
-        double unk8_angle= 8;  //6/7/8 are angles in degrees but don't know to what.
+        double unk8_angle = 8;  //6/7/8 are angles in degrees but don't know to what.
         uint64 unk10 = 10;
         uint64 unk11 = 11;
         uint64 unk12 = 12;
@@ -45,3 +42,41 @@ message Signature {
         double accel_z= 18; // Always 0x40239999a0000000 in the dumps its 9.8 double
         uint64 unk19 = 19; // Always 3
     }
+
+    message DeviceInfo {
+        string device_id = 1;
+        string android_board_name = 2;
+        string android_bootloader = 3;
+        string device_brand = 4;
+        string device_model = 5;
+        string device_model_identifier = 6; // Android only
+        string device_comms_model = 7;
+        string hardware_manufacturer = 8;
+        string hardware_model = 9;
+        string firmware_brand = 10; // On iOS: "iPhone OS"
+        string firmware_tags = 12; // Android only
+        string firmware_type = 13; // On iOS instead: iOS version
+        string firmware_fingerprint = 14; // Android only
+    }
+
+    // iOS only
+    message Unknown9 {
+        // all of these had 1 as their value
+        uint64 unk3 = 3;
+        uint64 unk5 = 5;
+        uint64 unk6 = 6;
+    }
+
+    uint64 timestamp_since_start = 2;
+    repeated LocationFix location_fix = 4;
+    UnknownBinary5 unk5 = 5;
+    SensorInfo sensor_info = 7;
+    DeviceInfo device_info = 8;
+    Unknown9 unk9 = 9; // iOS only
+    uint64 unk10 = 10; //actually looks like a negative double
+    uint64 unk20 = 20;
+    bytes unk22 = 22; // same in all dumps
+    uint64 timestamp = 23; // epoch timestamp in ms
+    bytes unk24 = 24; // globeriz: possible 0x30 bytes length? lennix: seems to be variable length
+
+}
