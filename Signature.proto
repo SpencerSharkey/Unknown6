@@ -29,18 +29,18 @@ message Signature {
         uint64 unk3 = 3;
         uint64 unk4 = 4;
         uint64 unk5 = 5;
-        double unk6_angle = 6;
-        double unk7_angle = 7;
-        double unk8_angle = 8;  //6/7/8 are angles in degrees but don't know to what.
+        double gyroscope_angle6 = 6;
+        double gyroscope_angle7 = 7;
+        double gyroscope_angle8 = 8;  //6/7/8 are angles in degrees but don't know to what.
         uint64 unk10 = 10;
         uint64 unk11 = 11;
         uint64 unk12 = 12;
         uint64 unk13 = 13;
         uint64 unk14 = 14;
-        double accel_x = 16;
-        double accel_y = 17;
-        double accel_z= 18; // Always 0x40239999a0000000 in the dumps its 9.8 double
-        uint64 unk19 = 19; // Always 3
+        double accelerometer_x = 16;
+        double accelerometer_y = 17;
+        double accelerometer_z = 18; // Always 0x40239999a0000000 in the dumps its 9.8 double
+        uint64 accelerometer_axis = 19; // Always 3
     }
 
     message DeviceInfo {
