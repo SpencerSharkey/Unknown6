@@ -115,7 +115,6 @@ but need identifying:
 
 | Sub Name      | Details |
 |---------------|---------|
-| sub_11ABD0    | small wrapper around basic_string::append |
 | sub_11BB2C    | printf wrapper |
 | sub_11BBB4    | printf wrapper |
 | sub_1B7044    | some exception |
@@ -134,6 +133,10 @@ translation table in case they pop up in newly decompiled code:
 | Sub Name      | Real Name |
 |---------------|-----------|
 | sub_110830    | WireFormat::VerifyUTF8StringFallback |
+| sub_11AC24    | ProtoBuf::LogMessage::constructor |
+| sub_11ABD0    | ``ProtoBuf::LogMessage::operator<<`` |
+| sub_11B094    | ProtoBuf::LogMessage::equalsOperator |
+| sub_11AC40    | ProtoBuf::LogMessage::destructor |
 | sub_19B6C4    | std::basic_string |
 | sub_1B6FC0    | std::logic_error |
 | sub_1B7D04    | basic_string::_S_create |
