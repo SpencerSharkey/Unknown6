@@ -6,12 +6,12 @@ message Signature {
         // On iOS there are some LocationFixes with unk26=1 and everything else empty
         string provider = 1; // "network", "gps", "fused", possibly others
         uint64 timestamp_since_start = 2;
-        double latitude = 13;   // sample 0x424b78d6 ->  50.868
-        double longitude = 14; // sample 0x408a1cac ->   4.316
-        double unk20 = 20; // sample 0xbf800000 (iOS only, possibly horizontal accuracy)
-        double altitude = 21;   //  sample 0x41aded91 -> 21.74
-        double unk22 = 22; // sample 0x40800000 (iOS only, possibly vertical accuracy)
-        uint64 unk26 = 26; // Always 3
+        float latitude = 13;
+        float longitude = 14;
+        uint64 unk20 = 20; // sample 0xbf800000 (iOS only, possibly horizontal accuracy)
+        float altitude = 21;
+        uint64 unk22 = 22; // sample 0x40800000 (iOS only, possibly vertical accuracy)
+        uint64 unk26 = 26; // Always 3 (possibly GPS status or number of satellites)
         uint64 unk28 = 28; // Always 1
     }
 
@@ -33,7 +33,7 @@ message Signature {
         uint64 unk5 = 5;
         double gyroscope_angle6 = 6;
         double gyroscope_angle7 = 7;
-        double gyroscope_angle8 = 8;  //6/7/8 are angles in degrees but don't know to what.
+        double gyroscope_angle8 = 8;
         uint64 unk10 = 10;
         uint64 unk11 = 11;
         uint64 unk12 = 12;
@@ -41,7 +41,7 @@ message Signature {
         uint64 unk14 = 14;
         double accelerometer_x = 16;
         double accelerometer_y = 17;
-        double accelerometer_z = 18; // Always 0x40239999a0000000 in the dumps its 9.8 double
+        double accelerometer_z = 18;
         uint64 accelerometer_axes = 19; // Always 3
     }
 
