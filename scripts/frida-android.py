@@ -33,7 +33,6 @@ def get_messages_from_js(message, data):
 		f.close()
 		if parse:
 			command = "type %s | %s\protoc --decode_raw > %s" % (file_name + '.bin', dump_directory_location, file_name + ".txt")
-			print command
 			b = os.system(command)
 			parse = False
 
