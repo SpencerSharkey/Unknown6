@@ -14214,7 +14214,7 @@ int encrypt(const unsigned char *input, size_t input_size,
 
 	for (int j = 0; j < 8; j++){
 		for (int i = 0; i < 32; i++){
-			arr2[32 * j + i] = rotl8(iv[i], j);
+			arr2[32 * j + i] = rotl8(iv[i], j); //rotate byte left
 		}
 	}
 
@@ -14232,7 +14232,7 @@ int encrypt(const unsigned char *input, size_t input_size,
 		for (int i = 0; i < 256; i++){
 			output[offset + i] ^= arr2[i];
 		}
-		sub_9E9D8(output + offset, arr3);
+		sub_9E9D8(output + offset, arr3); // !! encryption here
 		memcpy(arr2, arr3, 256);
 		memcpy(output + offset, arr3, 256);
 	}
