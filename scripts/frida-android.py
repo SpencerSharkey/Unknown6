@@ -5,18 +5,22 @@ package_name = "com.nianticlabs.pokemongo"
 input_counter = 0
 
 def get_messages_from_js(message, data):
-		print(message)
 		if data is None:
 			return
 		global input_counter
 		file_name = 'dump'
-		file_name += str(input_counter)
+		if message['payload']['name'] == 'result':
+			input_counter -= 1
+			file_name += str(input_counter)
+			file_name += '_encrypted'
+		elif message['payload']['name'] == 'start':
+			file_name += str(input_counter)
+		input_counter += 1
 		file_name += '.bin'
 		f = open(file_name, 'wb')
 		f.write(data)
 		f.close()
-		input_counter +=1
- 
+		 
 
 def instrument_debugger_checks():
 
@@ -53,7 +57,8 @@ def instrument_debugger_checks():
 					}));
 					
 					console.log("RESULT (1000 BYTES):");
-				var buf = Memory.readByteArray(retval, 1000);
+					var buf = Memory.readByteArray(retval, 1000);
+					send({name:'result'},buf);
 					console.log(hexdump(buf, {
 					  offset: 0,
 					  length: 1000,
@@ -67,13 +72,8 @@ def instrument_debugger_checks():
         return hook_code
 
 deviceManager = frida.get_device_manager()
-deviceMobile = 0
 devices = deviceManager.enumerate_devices()
-
-for x in devices:
-	if x.id == "75c2be6a":
-		deviceMobile = x
-		print(x)
+deviceMobile = devices[-1]
 
 process = deviceMobile.attach(package_name)
 script = process.create_script(instrument_debugger_checks())
