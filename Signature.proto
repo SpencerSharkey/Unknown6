@@ -75,10 +75,14 @@ message Signature {
     SensorInfo sensor_info = 7;
     DeviceInfo device_info = 8;
     Unknown9 unk9 = 9; // iOS only
-    uint64 unk10 = 10; //actually looks like a negative double
-    uint64 unk20 = 20;
-    bytes unk22 = 22; // same in all dumps
+    uint32 unk10 = 10; //Location1 hashed based on the auth_token - xxHash32
+    uint32 unk20 = 20; //Location2 hashed based on the auth_token - xxHash32
+    bytes unk22 = 22; // replay check - Changes every 5 minutes or so. Generation unknown but pointed to by 0001B8614
     uint64 timestamp = 23; // epoch timestamp in ms
-    repeated uint32 request_hash = 24; // hashes of each request message
+    repeated uint64 request_hash = 24; // hashes of each request message in a hashArray - xxhash64
+    
+    // Addresses for the corresponding hash functions:
+    //    xxHash32              00054D28 
+    //    xxhash64              000546C8 - Feeds into 00053D40
 
 }
