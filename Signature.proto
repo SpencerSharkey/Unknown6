@@ -28,20 +28,21 @@ message Signature {
 
     message SensorInfo {
         uint64 timestamp_snapshot = 1; // in ms
-        uint64 unk3 = 3;
-        uint64 unk4 = 4;
-        uint64 unk5 = 5;
-        double gyroscope_angle6 = 6;
-        double gyroscope_angle7 = 7;
-        double gyroscope_angle8 = 8;  //6/7/8 are angles in degrees but don't know to what.
-        uint64 unk10 = 10;
-        uint64 unk11 = 11;
-        uint64 unk12 = 12;
-        uint64 unk13 = 13;
-        uint64 unk14 = 14;
-        double accelerometer_x = 16;
-        double accelerometer_y = 17;
-        double accelerometer_z = 18; // Always 0x40239999a0000000 in the dumps its 9.8 double
+        double magnetometer_x = 3;
+        double magnetometer_y = 4;
+        double magnetometer_z = 5;
+        double angle_normalized_x = 6;
+        double angle_normalized_y = 7;
+        double angle_normalized_z = 8;
+        double accel_raw_x = 10;
+        double accel_raw_y = 11;
+        double accel_raw_z = 12;
+        double gyroscope_raw_x = 13;
+        double gyroscope_raw_y = 14;
+        double gyroscope_raw_z = 15;
+        double accel_normalized_x = 16;
+        double accel_normalized_y = 17;
+        double accel_normalized_z = 18;
         uint64 accelerometer_axes = 19; // Always 3
     }
 
