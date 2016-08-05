@@ -14168,27 +14168,6 @@ void sub_9E9D8(unsigned char *input, unsigned char*output)
 	memcpy(output, temp2, 0x100);
 }
 
-void sub_9E9D8_decrypt(unsigned char *input, unsigned char*output)
-{
-	_DWORD temp[0x32C / 4];
-	_DWORD temp2[0x100 / 4];
-	memcpy(temp2, input, 0x100);
-	sub_9E1C4((unsigned char*)temp, (unsigned char*)temp2);
-	sub_9C42C((unsigned char*)temp);
-	sub_9A490((unsigned char*)temp);
-	sub_985E0((unsigned char*)temp);
-	sub_96984((unsigned char*)temp);
-	sub_94BDC((unsigned char*)temp);
-	sub_92E08((unsigned char*)temp);
-	sub_910A8((unsigned char*)temp);
-	sub_8F0B0((unsigned char*)temp);
-	sub_8D114((unsigned char*)temp);
-	sub_8B2F4((unsigned char*)temp);
-	sub_8930C((unsigned char*)temp);
-	sub_87568((unsigned char*)temp, (unsigned char*)temp2);
-	memcpy(output, temp2, 0x100);
-}
-
 int encrypt(const unsigned char *input, size_t input_size,
 	const unsigned char* iv, size_t iv_size,
 	unsigned char* output, size_t * output_size) {
@@ -14240,24 +14219,3 @@ int encrypt(const unsigned char *input, size_t input_size,
 	*output_size = totalsize;
 	return 0;
 }
-
-void decrypt(unsigned char *input, int size) {
-	char arr2[256];
-	char arr3[256];
-
-	for (int j = 0; j < 8; j++)
-		for (int i = 0; i < 32; i++)
-			arr2[32 * j + i] = rotl8(input[i], j);
-
-	for (int offset = 32; offset < size; offset += 256)
-	{
-		sub_9E9D8_decrypt(input + offset, arr3);
-		for (int i = 0; i < 256; i++)
-			input[offset + i] ^= arr2[i];
-		memcpy(arr2, input + offset, 256);
-		memcpy(input + offset, arr3, 256);
-	}
-
-	memmove(input, input + 32, size - 32);
-}
-
