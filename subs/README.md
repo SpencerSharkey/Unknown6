@@ -15,7 +15,7 @@ parts of this subroutine are:
   * Creation of the input buffer (which is a serialization of
     **Signature.proto** protobuf? i.e. the Unknown6)
 
-  * Signature computation for the input buffer (**already reverse
+  * Encryption of the input buffer (**already reverse
     engineered and available as libencrypt**).
 
 | Sub Name      | Details |
@@ -105,7 +105,7 @@ sub_110830 has a lot of further dependencies:
 | sub_1B8850    | |
 
 
-### Signature Computation
+### Encryption
 
 See ../c_code/encrypt.c for an already working amalgamation of these.
 
